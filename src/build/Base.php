@@ -4,56 +4,6 @@ namespace zongphp\rbac\build;
 use zongphp\config\Config;
 use zongphp\session\Session;
 
-/** RBAC表
- * CREATE TABLE IF NOT EXISTS `access` (
- * `role_id` smallint(6) unsigned NOT NULL,
- * `node_id` smallint(6) unsigned NOT NULL,
- * KEY `role_id` (`role_id`),
- * KEY `nodeId` (`node_id`)
- * ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
- *
- * CREATE TABLE IF NOT EXISTS `node` (
- * `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
- * `name` varchar(20) NOT NULL,
- * `title` varchar(50) DEFAULT NULL,
- * `status` tinyint(1) DEFAULT 1,
- * `remark` varchar(255) DEFAULT NULL,
- * `sort` smallint(6) unsigned DEFAULT 100,
- * `pid` smallint(6) unsigned NOT NULL,
- * `level` tinyint(1) unsigned NOT NULL,
- * `show` tinyint(1) unsigned NOT NULL default 1,
- * PRIMARY KEY (`id`),
- * KEY `level` (`level`),
- * KEY `pid` (`pid`),
- * KEY `status` (`status`),
- * KEY `name` (`name`)
- * ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
- *
- * CREATE TABLE IF NOT EXISTS `user` (
- * `id` mediumint(9) unsigned DEFAULT NULL,
- * `username` char(20) DEFAULT NULL,
- * `password` char(32) DEFAULT NULL,
- * KEY `username` (`username`),
- * ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
- *
- * CREATE TABLE IF NOT EXISTS `role` (
- * `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
- * `name` varchar(20) NOT NULL,
- * `pid` smallint(6) DEFAULT NULL,
- * `status` tinyint(1) unsigned DEFAULT NULL,
- * `remark` varchar(255) DEFAULT NULL,
- * PRIMARY KEY (`id`),
- * KEY `pid` (`pid`),
- * KEY `status` (`status`)
- * ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
- *
- * CREATE TABLE IF NOT EXISTS `user_role` (
- * `role_id` mediumint(9) unsigned DEFAULT NULL,
- * `user_id` char(32) DEFAULT NULL,
- * KEY `group_id` (`role_id`),
- * KEY `user_id` (`user_id`)
- * ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
- */
 class Base {
 	protected $user_table;
 	protected $role_table;

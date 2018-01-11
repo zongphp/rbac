@@ -1,18 +1,18 @@
 {
   "name": "zongphp/rbac",
-  "description": "RBAC管理",
-  "type": "project",
+  "description": "RBAC管理。",
   "keywords": [
+    "zongphp",
     "rbac"
   ],
   "license": "MIT",
   "minimum-stability": "stable",
   "require": {
     "php": ">=5.4.0",
-    "zongphp/config": "~1.0",
-    "zongphp/arr": "~1.0",
-    "zongphp/session": "~1.0",
-    "zongphp/db": "~1.0"
+    "zongphp/config": "~2.0",
+    "zongphp/arr": "~2.0",
+    "zongphp/session": "~2.0",
+    "zongphp/db": "~2.0"
   },
   "autoload": {
     "files": [],

@@ -1,5 +1,5 @@
 <?php
-namespace zongphp\rbac;
+namespace zongphp\facade;
 
 use zongphp\framework\build\Facade;
 

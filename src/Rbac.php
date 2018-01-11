@@ -35,8 +35,3 @@ class Rbac {
 		return call_user_func_array( [ static::single(), $name ], $arguments );
 	}
 }
-
-
-
-
-
